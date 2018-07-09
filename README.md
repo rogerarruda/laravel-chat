@@ -1,46 +1,40 @@
-# laravel-chat
+# Laravel chat com Pusher
 
-Build a chat app with Laravel and Pusher
+Criação de um aplicativo de bate-papo com o Laravel e o Pusher
 
 ## Getting Started
 
-Clone the project repository by running the command below if you use SSH
+Clone o repositório do projeto
 
 ```bash
-git clone git@github.com:ammezie/laravel-chat.git
+git clone https://github.com/rogerarruda/laravel-chat
 ```
 
-If you use https, use this instead
-
-```bash
-git clone https://github.com/ammezie/laravel-chat.git
-```
-
-After cloning,run:
+Depois de clonar, entre na pasta e execute o comando (você deve ter o composer instalado):
 
 ```bash
 composer install
 ```
 
-Duplicate `.env.example` and rename it `.env`
+Copie o arquivo `.env.example` and rename it `.env`
 
-Then run:
+Depois execute:
 
 ```bash
 php artisan key:generate
 ```
 
-### Setup Pusher
+### Configurando o Pusher
 
-If you don't have one already, create a free Pusher account at [https://pusher.com/signup](https://pusher.com/signup) then login to your dashboard and create an app.
+Se você não tiver um, crie uma conta gratuita no Pusher em [https://pusher.com/signup](https://pusher.com/signup) então faça o login no seu painel e crie um aplicativo.
 
-Set the `BROADCAST_DRIVER` in your `.env` file to **pusher**:
+Coloque `BROADCAST_DRIVER` em seu arquivo `.env` **pusher**:
 
 ```txt
 BROADCAST_DRIVER=pusher
 ```
 
-Then fill in your Pusher app credentials in your `.env` file:
+Em seguida, preencha suas credenciais do aplicativo Pusher no seu `.env`:
 
 ```txt
 PUSHER_APP_ID=xxxxxx
@@ -49,18 +43,19 @@ PUSHER_APP_SECRET=xxxxxxxxxxxxxxxxxxxx
 PUSHER_APP_CLUSTER=
 ```
 
-### Database Migrations
+### Migração do banco de dados
 
-Be sure to fill in your database details in your `.env` file before running the migrations:
+Certifique-se de preencher os detalhes do banco de dados em seu `.env` depois execute o comando:
 
 ```bash
 php artisan migrate
 ```
 
-And finally, start the application:
+E finalmente, inicie o aplicativo:
+
 
 ```bash
 php artisan serve
 ```
 
-and visit [http://localhost:8000/](http://localhost:8000/) to see the application in action.
+visite [http://localhost:8000/](http://localhost:8000/) veja a aplicação em ação.
